@@ -34,10 +34,29 @@ export default function LicenseMonGame() {
   const [score, setScore] = useState(0);
   const [licenseLevel, setLicenseLevel] = useState('Apprentice');
   const [feedback, setFeedback] = useState('');
+  const [answeredMons, setAnsweredMons] = useState<Set<number>>(new Set());
+  const [wrongAnsweredMons, setWrongAnsweredMons] = useState<Set<number>>(new Set());
+  const [gameWon, setGameWon] = useState(false);
 
   const getRandomMon = () => {
-    const randomIndex = Math.floor(Math.random() * licenseMons.length);
-    setCurrentMon(licenseMons[randomIndex]);
+    // Check if all questions have been answered correctly
+    if (answeredMons.size === licenseMons.length) {
+      setGameWon(true);
+      return;
+    }
+
+    // Create pool of unanswered or wrong-answered questions
+    const availableMons = licenseMons.filter(mon => 
+      !answeredMons.has(mon.id) || wrongAnsweredMons.has(mon.id)
+    );
+
+    if (availableMons.length === 0) {
+      setGameWon(true);
+      return;
+    }
+
+    const randomIndex = Math.floor(Math.random() * availableMons.length);
+    setCurrentMon(availableMons[randomIndex]);
     setFeedback('');
   };
 
@@ -47,15 +66,22 @@ export default function LicenseMonGame() {
     if (answer === currentMon.correctAnswer) {
       setScore(score + 100);
       setFeedback(`Correct! You caught ${currentMon.name}!`);
+      setAnsweredMons(new Set(answeredMons).add(currentMon.id));
+      setWrongAnsweredMons(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(currentMon.id);
+        return newSet;
+      });
       
       // Level up logic
       if (score >= 500 && score < 1500) setLicenseLevel('Journeyman');
       if (score >= 1500) setLicenseLevel('Master Stylist');
     } else {
       setFeedback(`Violation! The correct answer was: ${currentMon.correctAnswer}`);
+      setWrongAnsweredMons(new Set(wrongAnsweredMons).add(currentMon.id));
     }
     
-    setTimeout(getRandomMon, 1500);
+    // Removed the automatic timeout - now user clicks "Next Question"
   };
 
   useEffect(() => {
@@ -83,7 +109,30 @@ export default function LicenseMonGame() {
         </div>
       )}
       
-      {feedback && <p className="feedback">{feedback}</p>}
+      {feedback && (
+        <div className="feedback">
+          <p>{feedback}</p>
+          <button onClick={getRandomMon}>Next Question</button>
+        </div>
+      )}
+      {gameWon && (
+        <div className="win-screen">
+          <h2>Congratulations!</h2>
+          <p>You've mastered all Oregon Cosmetology Rules!</p>
+          <p>Final Score: {score}</p>
+          <p>License Level: {licenseLevel}</p>
+          <button onClick={() => {
+            setAnsweredMons(new Set());
+            setWrongAnsweredMons(new Set());
+            setScore(0);
+            setLicenseLevel('Apprentice');
+            setGameWon(false);
+            getRandomMon();
+          }}>
+            Play Again
+          </button>
+        </div>
+      )}
     </div>
   );
 }
