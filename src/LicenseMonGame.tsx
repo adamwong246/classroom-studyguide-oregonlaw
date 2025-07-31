@@ -1,138 +1,170 @@
 import { useEffect, useState } from 'react';
+import LicenseMonDisplay from './LicenseMonDisplay';
 
-type LicenseMon = {
+interface LicenseMon {
   id: number;
   name: string;
   type: string;
   question: string;
   options: string[];
   correctAnswer: string;
-};
+  description?: string;
+}
 
-const licenseMons: LicenseMon[] = [
-  {
-    id: 1,
-    name: 'Disinfectle',
-    type: 'water',
-    question: 'How long must tools soak in disinfectant?',
-    options: ['5 minutes', '10 minutes', '30 seconds', 'Until dry'],
-    correctAnswer: '10 minutes'
-  },
-  {
-    id: 2,
-    name: 'Glowgiene',
-    type: 'fairy',
-    question: 'When must gloves be worn?',
-    options: ['Shampooing', 'Applying color', 'Blowdrying', 'All of the above'],
-    correctAnswer: 'Applying color'
-  },
-  // Add more LicenseMons from COS-Rules.txt
-];
+/**
+ * Shuffles array elements using Fisher-Yates algorithm
+ * @param array The array to shuffle
+ * @returns New array with shuffled elements
+ */
+function shuffleArray<T>(array: T[]): T[] {
+  return [...array].sort(() => Math.random() - 0.5);
+}
+
+/**
+ * Initializes game state with shuffled questions and reset stats
+ */
+
+import licenseMonsData from './licenseMons.json';
+import { Container } from 'react-bootstrap';
+
+const licenseMons: LicenseMon[] = licenseMonsData.map(mon => ({
+  ...mon,
+  options: shuffleArray(mon.options) // Shuffle answer options
+}));
 
 export default function LicenseMonGame() {
   const [currentMon, setCurrentMon] = useState<LicenseMon | null>(null);
   const [score, setScore] = useState(0);
   const [licenseLevel, setLicenseLevel] = useState('Apprentice');
   const [feedback, setFeedback] = useState('');
-  const [answeredMons, setAnsweredMons] = useState<Set<number>>(new Set());
-  const [wrongAnsweredMons, setWrongAnsweredMons] = useState<Set<number>>(new Set());
+  const [questionOrder, setQuestionOrder] = useState<number[]>([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
   const [gameWon, setGameWon] = useState(false);
 
-  const getRandomMon = () => {
-    // Check if all questions have been answered correctly
-    if (answeredMons.size === licenseMons.length) {
-      setGameWon(true);
-      return;
+  const initializeGame = () => {
+    // Create shuffled order of all questions
+    const shuffledOrder = [...Array(licenseMons.length).keys()]
+      .sort(() => Math.random() - 0.5);
+    setQuestionOrder(shuffledOrder);
+    setCurrentQuestionIndex(0);
+    setCorrectAnswers(0);
+    setGameWon(false);
+    setCurrentMon(licenseMons[shuffledOrder[0]]);
+  };
+
+  const getNextQuestion = () => {
+    const nextIndex = currentQuestionIndex + 1;
+    if (nextIndex >= licenseMons.length) {
+      // Check if player answered 75%+ correctly
+      if (correctAnswers / licenseMons.length >= 0.75) {
+        setGameWon(true);
+      } else {
+        // Restart game if not enough correct answers
+        initializeGame();
+      }
+    } else {
+      setCurrentQuestionIndex(nextIndex);
+      setCurrentMon(licenseMons[questionOrder[nextIndex]]);
     }
-
-    // Create pool of unanswered or wrong-answered questions
-    const availableMons = licenseMons.filter(mon => 
-      !answeredMons.has(mon.id) || wrongAnsweredMons.has(mon.id)
-    );
-
-    if (availableMons.length === 0) {
-      setGameWon(true);
-      return;
-    }
-
-    const randomIndex = Math.floor(Math.random() * availableMons.length);
-    setCurrentMon(availableMons[randomIndex]);
     setFeedback('');
   };
 
   const handleAnswer = (answer: string) => {
     if (!currentMon) return;
     
-    if (answer === currentMon.correctAnswer) {
+    // Compare against original correct answer since options are shuffled
+    const originalMon = licenseMonsData.find(m => m.id === currentMon.id);
+    if (answer === originalMon?.correctAnswer) {
       setScore(score + 100);
+      setCorrectAnswers(correctAnswers + 1);
       setFeedback(`Correct! You caught ${currentMon.name}!`);
-      setAnsweredMons(new Set(answeredMons).add(currentMon.id));
-      setWrongAnsweredMons(prev => {
-        const newSet = new Set(prev);
-        newSet.delete(currentMon.id);
-        return newSet;
-      });
       
       // Level up logic
       if (score >= 500 && score < 1500) setLicenseLevel('Journeyman');
       if (score >= 1500) setLicenseLevel('Master Stylist');
     } else {
       setFeedback(`Violation! The correct answer was: ${currentMon.correctAnswer}`);
-      setWrongAnsweredMons(new Set(wrongAnsweredMons).add(currentMon.id));
     }
     
     // Removed the automatic timeout - now user clicks "Next Question"
   };
 
   useEffect(() => {
-    getRandomMon();
+    initializeGame();
   }, []);
 
   return (
-    <div className="game-container">
-      <div className="player-stats">
-        <p>License: {licenseLevel}</p>
-        <p>Score: {score}</p>
+    <Container className="p-0">
+      <div className="d-flex justify-content-between mb-3">
+        <div className="pixel-card p-2">
+          <span>LICENSE: {licenseLevel}</span>
+        </div>
+        <div className="pixel-card p-2">
+          <span>SCORE: {score}</span>
+        </div>
       </div>
-      
+
       {currentMon && (
-        <div className={`license-mon ${currentMon.type}`}>
-          <h2>A wild {currentMon.name} appeared!</h2>
-          <p className="question">{currentMon.question}</p>
-          <div className="options">
-            {currentMon.options.map((option, index) => (
-              <button key={index} onClick={() => handleAnswer(option)}>
-                {option}
-              </button>
-            ))}
+        <div className="pixel-card mb-3">
+          <div className="card-header">{currentMon.name}</div>
+
+          <h5 className="mb-3">A WILD {currentMon.name.toUpperCase()} APPEARED!</h5>
+
+          <div className="card-body">
+            <LicenseMonDisplay mon={currentMon} />
+            <p className="mt-3 mb-3">{currentMon.question}</p>
+            <div className="row g-2">
+              {currentMon.options.map((option, index) => (
+                <div key={index} className="col-md-6">
+                  <button 
+                    className="pixel-btn w-100"
+                    onClick={() => handleAnswer(option)}
+                    style={{
+                      fontFamily: '"Press Start 2P", monospace',
+                      fontSize: '10px',
+                      textTransform: 'uppercase'
+                    }}
+                  >
+                    {option}
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
-      
+
       {feedback && (
-        <div className="feedback">
-          <p>{feedback}</p>
-          <button onClick={getRandomMon}>Next Question</button>
+        <div className="pixel-card mb-3">
+          <div className="card-body text-center">
+            <p className="mb-3">{feedback}</p>
+            <button 
+              className="pixel-btn"
+              onClick={getNextQuestion}
+            >
+              NEXT QUESTION
+            </button>
+          </div>
         </div>
       )}
+
       {gameWon && (
-        <div className="win-screen">
-          <h2>Congratulations!</h2>
-          <p>You've mastered all Oregon Cosmetology Rules!</p>
-          <p>Final Score: {score}</p>
-          <p>License Level: {licenseLevel}</p>
-          <button onClick={() => {
-            setAnsweredMons(new Set());
-            setWrongAnsweredMons(new Set());
-            setScore(0);
-            setLicenseLevel('Apprentice');
-            setGameWon(false);
-            getRandomMon();
-          }}>
-            Play Again
-          </button>
+        <div className="pixel-card text-center">
+          <div className="card-header">CONGRATULATIONS!</div>
+          <div className="card-body">
+            <p>You've mastered all Oregon Cosmetology Rules!</p>
+            <p>FINAL SCORE: {score}</p>
+            <p>LICENSE LEVEL: {licenseLevel}</p>
+            <button 
+              className="pixel-btn"
+              onClick={initializeGame}
+            >
+              PLAY AGAIN
+            </button>
+          </div>
         </div>
       )}
-    </div>
+    </Container>
   );
 }

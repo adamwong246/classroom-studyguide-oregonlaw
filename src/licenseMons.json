@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "name": "Disinfectle",
+    "type": "water",
+    "question": "How long must tools soak in disinfectant?",
+    "options": ["5 minutes", "10 minutes", "30 seconds", "Until dry"],
+    "correctAnswer": "10 minutes",
+    "description": "A bubbly blue creature with a transparent body showing swirling disinfectant inside. Its hands are shaped like soaking trays and it leaves a trail of clean sparkles wherever it goes."
+  },
+  {
+    "id": 2,
+    "name": "Glowgiene",
+    "type": "fairy",
+    "question": "When must gloves be worn?",
+    "options": ["Shampooing", "Applying color", "Blowdrying", "All of the above"],
+    "correctAnswer": "Applying color",
+    "description": "A radiant pink fairy with glowing gloves that change color based on the chemicals it encounters. Its wings are made of translucent protective film."
+  },
+  {
+    "id": 3,
+    "name": "Ventiloom",
+    "type": "flying",
+    "question": "What defines \"adequate ventilation\" in a facility?",
+    "options": [
+      "Open windows only",
+      "Removes fumes/vapors to prevent hazards",
+      "Air conditioning running",
+      "No specific requirements"
+    ],
+    "correctAnswer": "Removes fumes/vapors to prevent hazards",
+    "description": "A sleek, turbine-like creature with spinning fan blades for wings. Its body constantly circulates air, and it hums with a soothing white noise."
+  },
+  {
+    "id": 4,
+    "name": "Sharpshock",
+    "type": "electric",
+    "question": "How should used sharp-edged tools be disposed?",
+    "options": [
+      "Regular trash",
+      "Puncture-resistant sharps container",
+      "Recycle bin",
+      "Sink drain"
+    ],
+    "correctAnswer": "Puncture-resistant sharps container",
+    "description": "A spiky yellow creature with metallic quills that crackle with static electricity. Its body is shaped like a biohazard container with warning symbols that glow when agitated."
+  },
+  {
+    "id": 5,
+    "name": "Waxit",
+    "type": "fire",
+    "question": "When must used wax be disposed?",
+    "options": [
+      "Weekly",
+      "Monthly",
+      "At end of each business day",
+      "When container is full"
+    ],
+    "correctAnswer": "At end of each business day",
+    "description": "A molten orange creature with a body that constantly shifts between solid and liquid states. It leaves temporary wax sculptures behind that melt away by closing time."
+  },
+  {
+    "id": 6,
+    "name": "Towelyn",
+    "type": "normal",
+    "question": "How should chemically soiled towels be stored?",
+    "options": [
+      "Open laundry basket",
+      "Fire-retardant container",
+      "Under the sink",
+      "Mixed with clean towels"
+    ],
+    "correctAnswer": "Fire-retardant container",
+    "description": "A fluffy white creature with absorbent fibers that change color when exposed to chemicals. It carries a miniature fire extinguisher on its back at all times."
+  },
+  {
+    "id": 7,
+    "name": "Dermaplaneon",
+    "type": "steel",
+    "question": "What is required before performing dermaplaning?",
+    "options": [
+      "No requirements",
+      "6 hours of training (2 hands-on)",
+      "Client signature only",
+      "1 hour video tutorial"
+    ],
+    "correctAnswer": "6 hours of training (2 hands-on)",
+    "description": "A metallic-skinned creature with razor-sharp edges that glow when properly trained. Its body is covered in tiny certification badges."
+  },
+  {
+    "id": 8,
+    "name": "Peelizard",
+    "type": "poison",
+    "question": "How deep can an esthetician perform chemical peels?",
+    "options": [
+      "No depth limit",
+      "Stratum basale (basal layer)",
+      "Dermis layer",
+      "Muscle layer"
+    ],
+    "correctAnswer": "Stratum basale (basal layer)",
+    "description": "A translucent green lizard with skin that peels away in layers, revealing different colored underlayers. Its eyes glow red when approaching dangerous depths."
+  },
+  {
+    "id": 9,
+    "name": "Contaminull",
+    "type": "ghost",
+    "question": "What must be done before disinfecting tools?",
+    "options": [
+      "Just rinse with water",
+      "Remove hair/foreign material and clean with soap",
+      "Only wipe with towel",
+      "No cleaning needed before disinfecting"
+    ],
+    "correctAnswer": "Remove hair/foreign material and clean with soap",
+    "description": "A wispy gray ghost that becomes more solid as it cleans. It carries tiny brushes and leaves sparkling clean trails behind it."
+  },
+  {
+    "id": 10,
+    "name": "Floorguard",
+    "type": "ground",
+    "question": "What material must facility floors be made of?",
+    "options": [
+      "Carpet only",
+      "Any material is fine",
+      "Cleanable, non-porous material",
+      "Wood only"
+    ],
+    "correctAnswer": "Cleanable, non-porous material",
+    "description": "A stony brown creature with a polished, seamless surface. Its body repels liquids and dirt, leaving a perfectly clean surface wherever it rests."
+  }
+]

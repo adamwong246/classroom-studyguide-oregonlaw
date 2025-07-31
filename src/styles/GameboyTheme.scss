@@ -1,0 +1,106 @@
+// Gameboy color palette
+$gb-dark: #0f380f;          // Darkest green (almost black)
+$gb-dark-green: #306230;    // Dark green
+$gb-light-green: #8bac0f;   // Light green (main background)
+$gb-lightest-green: #9bbc0f; // Bright green (highlights)
+$gb-white: #ffffff;         // Pure white
+
+// Navbar styling
+.navbar {
+  background-color: $gb-dark !important;
+  border-bottom: 4px solid $gb-dark-green;
+  
+  a {
+    color: $gb-lightest-green !important;
+    text-shadow: 2px 2px $gb-dark-green;
+    
+    &:hover {
+      color: $gb-white !important;
+    }
+  }
+}
+
+// Body background with subtle scanline effect
+body {
+  background-color: $gb-light-green;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 95%,
+    rgba($gb-dark-green, 0.1) 100%
+  );
+  background-size: 100% 4px;
+}
+
+// Pixel art styling
+@mixin pixel-box($border-size: 4px) {
+  border: $border-size solid $gb-dark;
+  box-shadow: 
+    inset (-$border-size) (-$border-size) 0 $gb-dark-green,
+    inset $border-size $border-size 0 $gb-lightest-green;
+  background-color: $gb-light-green;
+}
+
+@mixin pixel-text {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+// Base styles
+body {
+  @include pixel-text;
+  color: $gb-dark;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+// Custom components
+.pixel-card {
+  @include pixel-box;
+  border-radius: 0;
+  margin-bottom: 1rem;
+  background-color: $gb-lightest-green;
+  
+  .card-header {
+    background-color: $gb-dark;
+    color: $gb-lightest-green;
+    border-bottom: 4px solid $gb-dark-green;
+    text-shadow: 2px 2px $gb-dark-green;
+  }
+}
+
+.pixel-btn {
+  @include pixel-box(2px);
+  color: $gb-dark;
+  padding: 8px;
+  text-align: center;
+  
+  &:hover {
+    background-color: darken($gb-light-green, 5%);
+  }
+  
+  &:active {
+    box-shadow: 
+      inset 2px 2px 0 $gb-dark-green,
+      inset -2px -2px 0 $gb-lightest-green;
+  }
+}
+
+// Import and set up the pixel font
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/pressstart2p/v15/e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2') format('woff2');
+}
+
+body, button, input, textarea, select {
+  font-family: 'Press Start 2P', monospace;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
