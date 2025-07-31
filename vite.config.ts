@@ -1,7 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/classroom-studyguide-oregonlaw/'
-})
+  base: "/classroom-studyguide-oregonlaw/",
+  build: {
+    outDir: "docs", // This line specifies the output directory
+  },
+});
