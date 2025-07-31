@@ -1,9 +1,17 @@
+import { useState, useEffect } from 'react';
+import LicenseMonGame from './LicenseMonGame';
+import './index.css';
+
 function App() {
   return (
     <div className="app">
-      <h1>Hello World</h1>
+      <header>
+        <h1>LicenseMon</h1>
+        <p>Gotta Know Them All! (Oregon Cosmetology Rules)</p>
+      </header>
+      <LicenseMonGame />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
