@@ -118,5 +118,226 @@
     ],
     "correctAnswer": "Cleanable, non-porous material",
     "description": "A stony brown creature with a polished, seamless surface. Its body repels liquids and dirt, leaving a perfectly clean surface wherever it rests."
+  },
+  {
+    "id": 11,
+    "name": "Sanitoad",
+    "question": "How should nonelectrical tools be disinfected?",
+    "options": [
+      "Wipe with towel",
+      "Soak in high-level disinfectant",
+      "Rinse with water",
+      "No disinfection needed"
+    ],
+    "correctAnswer": "Soak in high-level disinfectant",
+    "description": "A smooth-skinned amphibian that secretes disinfectant mucus from its pores."
+  },
+  {
+    "id": 12, 
+    "name": "Glovester",
+    "question": "When must gloves be worn?",
+    "options": [
+      "Only for chemical services",
+      "When handling sharp tools",
+      "During all services",
+      "When exposure to blood is likely"
+    ],
+    "correctAnswer": "When exposure to blood is likely",
+    "description": "A rubbery creature with extendable glove-like appendages that snap into place when needed."
+  },
+  {
+    "id": 13,
+    "name": "Restroomba",
+    "question": "Where must restroom sinks be located?",
+    "options": [
+      "Only in restrooms",
+      "In dispensing areas",
+      "Near workstations",
+      "No requirement"
+    ],
+    "correctAnswer": "In dispensing areas",
+    "description": "A self-cleaning creature that constantly sanitizes surfaces with swirling motions."
+  },
+  {
+    "id": 14,
+    "name": "Chemix",
+    "question": "Where should chemicals be mixed?",
+    "options": [
+      "At client's chair",
+      "In dispensing area",
+      "In storage area",
+      "Anywhere convenient"
+    ],
+    "correctAnswer": "In dispensing area",
+    "description": "A bubbling, color-changing creature that carefully measures and mixes solutions."
+  },
+  {
+    "id": 15,
+    "name": "Certibadge",
+    "question": "How often must certificates be renewed?",
+    "options": [
+      "Every year",
+      "Every 2 years",
+      "Every 5 years",
+      "Never"
+    ],
+    "correctAnswer": "Every 2 years",
+    "description": "A metallic badge creature that pulses with light when certifications are current."
+  },
+  {
+    "id": 16,
+    "name": "Sterilisk",
+    "question": "What is the minimum temperature for sterilization equipment?",
+    "options": [
+      "160°F (71°C)",
+      "212°F (100°C)", 
+      "250°F (121°C)",
+      "No temperature requirement"
+    ],
+    "correctAnswer": "250°F (121°C)",
+    "description": "A metallic dragon-like creature with steam vents along its spine. Its scales glow red when proper sterilization temperatures are reached."
+  },
+  {
+    "id": 17,
+    "name": "Permafang",
+    "question": "How often must permanent wave test curls be performed?",
+    "options": [
+      "Only when changing brands",
+      "Every 6 months",
+      "Before each client",
+      "Never required"
+    ],
+    "correctAnswer": "Before each client",
+    "description": "A serpentine creature with coiled, spring-like fangs that change tightness based on chemical strength. Its eyes glow when test curls are properly performed."
+  },
+  {
+    "id": 18,
+    "name": "Lashmite",
+    "question": "What is the minimum training required for eyelash extensions?",
+    "options": [
+      "No training required",
+      "4 hours online course",
+      "8 hours hands-on training",
+      "Full esthetics program"
+    ],
+    "correctAnswer": "8 hours hands-on training",
+    "description": "A tiny, delicate creature with dozens of ultra-fine lashes that extend and retract. It carries miniature adhesive bottles on its back."
+  },
+  {
+    "id": 19,
+    "name": "Bacterazor",
+    "question": "How should multi-use wax applicators be cleaned between clients?",
+    "options": [
+      "Wiped with alcohol",
+      "Soaked in disinfectant",
+      "Washed with soap and water",
+      "They must be single-use only"
+    ],
+    "correctAnswer": "They must be single-use only",
+    "description": "A translucent, gel-like creature with disposable appendages that dissolve after one use. It leaves a trail of sterile wax droplets."
+  },
+  {
+    "id": 20,
+    "name": "Ventigale",
+    "question": "What must ventilation systems remove according to Oregon rules?",
+    "options": [
+      "Only strong odors",
+      "Fumes, vapors and dust",
+      "Excess humidity",
+      "No specific requirements"
+    ],
+    "correctAnswer": "Fumes, vapors and dust",
+    "description": "A floating, fan-bladed creature that constantly circulates air. Its translucent body shows swirling particles being filtered out."
+  },
+  {
+    "id": 21,
+    "name": "Restroomba",
+    "question": "Where must restroom sinks be located?",
+    "options": [
+      "Only in restrooms",
+      "In dispensing areas",
+      "Near workstations",
+      "No requirement"
+    ],
+    "correctAnswer": "In dispensing areas",
+    "description": "A self-cleaning creature that constantly sanitizes surfaces with swirling motions. It leaves a trail of sparkling clean tiles behind it."
+  },
+  {
+    "id": 22,
+    "name": "Sterilisk",
+    "question": "What is the minimum time required for sterilization of tools in an autoclave?",
+    "options": [
+      "5 minutes at 250°F (121°C)",
+      "15 minutes at 250°F (121°C)", 
+      "30 minutes at 250°F (121°C)",
+      "No time requirement if temperature is reached"
+    ],
+    "correctAnswer": "15 minutes at 250°F (121°C)",
+    "description": "A metallic dragon-like creature with steam vents along its spine. Its scales glow red when proper sterilization is achieved and it carries a miniature autoclave on its back. The steam it exhales is always perfectly sterile."
+  },
+  {
+    "id": 23,
+    "name": "Sanitizeon",
+    "question": "What is the proper procedure for cleaning pedicure bowls between clients?",
+    "options": [
+      "Wipe with disinfectant towel",
+      "Rinse with water",
+      "Scrub with soap, rinse, then disinfect",
+      "No cleaning needed if no visible debris"
+    ],
+    "correctAnswer": "Scrub with soap, rinse, then disinfect",
+    "description": "A turtle-like creature with a bowl-shaped shell that automatically cleans itself after each use. Its shell glows when properly sanitized."
+  },
+  {
+    "id": 24,
+    "name": "Formaldehide",
+    "question": "What must be done when using products containing formaldehyde?",
+    "options": [
+      "Use in well-ventilated area only",
+      "No special requirements",
+      "Use only in small amounts",
+      "Mix with water first"
+    ],
+    "correctAnswer": "Use in well-ventilated area only",
+    "description": "A translucent, jelly-like creature that changes color when exposed to formaldehyde vapors. It wears a miniature respirator and carries ventilation fans on its back."
+  },
+  {
+    "id": 25,
+    "name": "Quatster",
+    "question": "What concentration of quaternary ammonium compound is required for disinfecting non-sharp tools?",
+    "options": [
+      "100 ppm",
+      "500 ppm",
+      "1000 ppm",
+      "5000 ppm"
+    ],
+    "correctAnswer": "1000 ppm",
+    "description": "A bubbly, geometric creature with crystalline structures that glow blue at proper disinfectant strength. Its body constantly filters and maintains the perfect chemical balance."
+  },
+  {
+    "id": 26,
+    "name": "Scrubula",
+    "question": "What is the first step in disinfecting tools?",
+    "options": [
+      "Soak in disinfectant",
+      "Scrub with soap and water",
+      "Rinse with water only",
+      "Wipe with a towel"
+    ],
+    "correctAnswer": "Scrub with soap and water",
+    "description": "A bristly, hedgehog-like creature with rotating scrub brushes for spines. Its body produces soap bubbles when properly cleaning tools, and it hums a cleaning tune while working."
+  },
+  {
+    "id": 27,
+    "name": "Microshield",
+    "question": "What PPE must be worn when performing services likely to generate splatter?",
+    "options": [
+      "Gloves only",
+      "Gloves and mask",
+      "Gloves, mask and eye protection",
+      "No PPE required"
+    ],
+    "correctAnswer": "Gloves, mask and eye protection",
+    "description": "A translucent, jellyfish-like creature with floating protective barriers that form around it. Its body pulses with warning colors when proper PPE isn't being used."
   }
 ]
