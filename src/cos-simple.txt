@@ -1684,7 +1684,7 @@ and defined under OAR 411-054-0005(48).
 
 Division 120
 CODE OF PROFESSIONAL CONDUCT
-817-120-0005
+
 Practice Standards
 (1) Authorization holders must adhere to all applicable Office laws and rules listed in ORS
 676.560 to 676.660 and OAR Chapter 331 divisions 1 through 30.

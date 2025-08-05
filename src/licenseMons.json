@@ -16,19 +16,6 @@
     "description": "A radiant pink fairy with glowing gloves that change color based on the chemicals it encounters. Its wings are made of translucent protective film."
   },
   {
-    "id": 3,
-    "name": "Ventiloom",
-    "question": "What defines \"adequate ventilation\" in a facility?",
-    "options": [
-      "Open windows only",
-      "Removes fumes/vapors to prevent hazards",
-      "Air conditioning running",
-      "No specific requirements"
-    ],
-    "correctAnswer": "Removes fumes/vapors to prevent hazards",
-    "description": "A sleek, turbine-like creature with spinning fan blades for wings. Its body constantly circulates air, and it hums with a soothing white noise."
-  },
-  {
     "id": 4,
     "name": "Sharpshock",
     "question": "How should used sharp-edged tools be disposed?",
@@ -133,19 +120,6 @@
     "description": "A smooth-skinned amphibian that secretes disinfectant mucus from its pores."
   },
   {
-    "id": 12, 
-    "name": "Glovester",
-    "question": "When must gloves be worn?",
-    "options": [
-      "Only for chemical services",
-      "When handling sharp tools",
-      "During all services",
-      "When exposure to blood is likely"
-    ],
-    "correctAnswer": "When exposure to blood is likely",
-    "description": "A rubbery creature with extendable glove-like appendages that snap into place when needed."
-  },
-  {
     "id": 13,
     "name": "Restroomba",
     "question": "Where must restroom sinks be located?",
@@ -187,15 +161,15 @@
   {
     "id": 16,
     "name": "Sterilisk",
-    "question": "What is the minimum temperature for sterilization equipment?",
+    "question": "What is the minimum temperature and time for sterilization equipment?",
     "options": [
-      "160°F (71°C)",
-      "212°F (100°C)", 
-      "250°F (121°C)",
+      "160°F (71°C) for 5 minutes",
+      "212°F (100°C) for 10 minutes", 
+      "250°F (121°C) for 15 minutes",
       "No temperature requirement"
     ],
-    "correctAnswer": "250°F (121°C)",
-    "description": "A metallic dragon-like creature with steam vents along its spine. Its scales glow red when proper sterilization temperatures are reached."
+    "correctAnswer": "250°F (121°C) for 15 minutes",
+    "description": "A metallic dragon-like creature with steam vents along its spine. Its scales glow red when proper sterilization is achieved and it carries a miniature autoclave on its back."
   },
   {
     "id": 17,
@@ -237,46 +211,7 @@
     "description": "A translucent, gel-like creature with disposable appendages that dissolve after one use. It leaves a trail of sterile wax droplets."
   },
   {
-    "id": 20,
-    "name": "Ventigale",
-    "question": "What must ventilation systems remove according to Oregon rules?",
-    "options": [
-      "Only strong odors",
-      "Fumes, vapors and dust",
-      "Excess humidity",
-      "No specific requirements"
-    ],
-    "correctAnswer": "Fumes, vapors and dust",
-    "description": "A floating, fan-bladed creature that constantly circulates air. Its translucent body shows swirling particles being filtered out."
-  },
-  {
     "id": 21,
-    "name": "Restroomba",
-    "question": "Where must restroom sinks be located?",
-    "options": [
-      "Only in restrooms",
-      "In dispensing areas",
-      "Near workstations",
-      "No requirement"
-    ],
-    "correctAnswer": "In dispensing areas",
-    "description": "A self-cleaning creature that constantly sanitizes surfaces with swirling motions. It leaves a trail of sparkling clean tiles behind it."
-  },
-  {
-    "id": 22,
-    "name": "Sterilisk",
-    "question": "What is the minimum time required for sterilization of tools in an autoclave?",
-    "options": [
-      "5 minutes at 250°F (121°C)",
-      "15 minutes at 250°F (121°C)", 
-      "30 minutes at 250°F (121°C)",
-      "No time requirement if temperature is reached"
-    ],
-    "correctAnswer": "15 minutes at 250°F (121°C)",
-    "description": "A metallic dragon-like creature with steam vents along its spine. Its scales glow red when proper sterilization is achieved and it carries a miniature autoclave on its back. The steam it exhales is always perfectly sterile."
-  },
-  {
-    "id": 23,
     "name": "Sanitizeon",
     "question": "What is the proper procedure for cleaning pedicure bowls between clients?",
     "options": [
@@ -289,7 +224,7 @@
     "description": "A turtle-like creature with a bowl-shaped shell that automatically cleans itself after each use. Its shell glows when properly sanitized."
   },
   {
-    "id": 24,
+    "id": 22,
     "name": "Formaldehide",
     "question": "What must be done when using products containing formaldehyde?",
     "options": [
@@ -302,7 +237,7 @@
     "description": "A translucent, jelly-like creature that changes color when exposed to formaldehyde vapors. It wears a miniature respirator and carries ventilation fans on its back."
   },
   {
-    "id": 25,
+    "id": 23,
     "name": "Quatster",
     "question": "What concentration of quaternary ammonium compound is required for disinfecting non-sharp tools?",
     "options": [
@@ -315,7 +250,7 @@
     "description": "A bubbly, geometric creature with crystalline structures that glow blue at proper disinfectant strength. Its body constantly filters and maintains the perfect chemical balance."
   },
   {
-    "id": 26,
+    "id": 24,
     "name": "Scrubula",
     "question": "What is the first step in disinfecting tools?",
     "options": [
@@ -328,7 +263,7 @@
     "description": "A bristly, hedgehog-like creature with rotating scrub brushes for spines. Its body produces soap bubbles when properly cleaning tools, and it hums a cleaning tune while working."
   },
   {
-    "id": 27,
+    "id": 25,
     "name": "Microshield",
     "question": "What PPE must be worn when performing services likely to generate splatter?",
     "options": [
@@ -339,5 +274,590 @@
     ],
     "correctAnswer": "Gloves, mask and eye protection",
     "description": "A translucent, jellyfish-like creature with floating protective barriers that form around it. Its body pulses with warning colors when proper PPE isn't being used."
+  },
+  {
+    "id": 26,
+    "name": "Barriclaw",
+    "question": "What must separate cosmetology services from tattoo/body piercing services in a facility?",
+    "options": [
+      "Curtain",
+      "Solid barrier",
+      "6 foot distance",
+      "No separation required"
+    ],
+    "correctAnswer": "Solid barrier",
+    "description": "A stone-like creature with segmented plates that form impenetrable walls. Its claws can shape solid partitions instantly when needed."
+  },
+  {
+    "id": 27,
+    "name": "Transcriptile",
+    "question": "What must an official transcript from a cosmetology school include?",
+    "options": [
+      "Just hours completed",
+      "Hours and practical operations",
+      "Only practical exam scores",
+      "Just graduation date"
+    ],
+    "correctAnswer": "Hours and practical operations",
+    "description": "A parchment-skinned creature that constantly unfurls scrolls from its body. The scrolls glow when they contain complete and accurate information."
+  },
+  {
+    "id": 28,
+    "name": "Bloodbane",
+    "question": "How should surfaces contaminated with blood be cleaned?",
+    "options": [
+      "Wipe with disinfectant towel",
+      "Clean with soap then low-level disinfectant",
+      "Clean with soap then high-level disinfectant",
+      "Rinse with water only"
+    ],
+    "correctAnswer": "Clean with soap then high-level disinfectant",
+    "description": "A crimson-eyed creature with antiseptic vapor constantly emanating from its pores. It leaves sterile trails wherever it goes."
+  },
+  {
+    "id": 29,
+    "name": "Curriculearn",
+    "question": "How many hours of Oregon laws/rules training must cosmetology students complete?",
+    "options": [
+      "5 hours",
+      "10 hours",
+      "20 hours",
+      "No requirement"
+    ],
+    "correctAnswer": "20 hours",
+    "description": "A book-shaped creature with pages that flip automatically. Its covers glow when proper training hours are recorded."
+  },
+  {
+    "id": 30,
+    "name": "Dispenseon",
+    "question": "Where must chemicals be mixed in a cosmetology facility?",
+    "options": [
+      "At client's chair",
+      "In storage area",
+      "In dispensing area",
+      "Anywhere convenient"
+    ],
+    "correctAnswer": "In dispensing area",
+    "description": "A liquid-metal creature that can separate and recombine its molecules to create perfect chemical mixtures. Its body has built-in measuring markers."
+  },
+  {
+    "id": 31,
+    "name": "Certifly",
+    "question": "How often must practitioner certificates be renewed?",
+    "options": [
+      "Every year",
+      "Every 2 years",
+      "Every 5 years",
+      "Never"
+    ],
+    "correctAnswer": "Every 2 years",
+    "description": "A winged creature with certificate-shaped wings that glow when current. Its body pulses with warning colors when renewal is overdue."
+  },
+  {
+    "id": 33,
+    "name": "Scrubrush",
+    "question": "When must practitioners wash their hands?",
+    "options": [
+      "Only at start of day",
+      "Before and after each client",
+      "When visibly dirty",
+      "Only after chemical services"
+    ],
+    "correctAnswer": "Before and after each client",
+    "description": "A bristly creature with soap bubble hands that constantly scrubs. Its arms extend to reach all areas and it leaves a trail of fresh citrus scent."
+  },
+  {
+    "id": 35,
+    "name": "Chemguard",
+    "question": "How should flammable chemicals be stored in a facility?",
+    "options": [
+      "Mixed with other chemicals",
+      "Near heat sources",
+      "Separate from ignition sources",
+      "In open containers"
+    ],
+    "correctAnswer": "Separate from ignition sources",
+    "description": "A armored lizard-like creature with flame-retardant scales that change color when exposed to chemicals. It carries miniature fire extinguishers on its back."
+  },
+  {
+    "id": 36,
+    "name": "Mixitron",
+    "question": "What must be done when mixing chemicals for services?",
+    "options": [
+      "Mix at client's chair for convenience",
+      "Mix in dispensing area with ventilation",
+      "Mix in storage area to save time",
+      "No special requirements"
+    ],
+    "correctAnswer": "Mix in dispensing area with ventilation",
+    "description": "A robotic creature with precise measuring arms and built-in ventilation fans. Its body displays warning lights when chemicals are improperly mixed."
+  },
+  {
+    "id": 37,
+    "name": "Flammablock",
+    "question": "How should flammable chemicals be stored in relation to other chemicals?",
+    "options": [
+      "Mixed together in same cabinet",
+      "On open shelves for easy access",
+      "Separated by adequate distance or barriers",
+      "Under workstations"
+    ],
+    "correctAnswer": "Separated by adequate distance or barriers",
+    "description": "A fire-resistant creature with compartmentalized storage compartments that glow red when chemicals are improperly stored. Its body emits cooling mist when hazards are detected."
+  },
+  {
+    "id": 38,
+    "name": "Documon",
+    "question": "What client information must be recorded for esthetic services?",
+    "options": [
+      "Just name and service date",
+      "Name, address, phone, birth date, service details",
+      "Only payment information",
+      "No records required"
+    ],
+    "correctAnswer": "Name, address, phone, birth date, service details",
+    "description": "A clipboard-shaped creature with glowing pages that automatically update. Its pen-tipped tail writes perfect notes and it beeps when records are incomplete."
+  },
+  {
+    "id": 39,
+    "name": "Disposalloy",
+    "question": "How should chemical waste be disposed of at the end of each business day?",
+    "options": [
+      "Left in open containers",
+      "Poured down the drain",
+      "Placed in fire-retardant containers",
+      "Mixed with regular trash"
+    ],
+    "correctAnswer": "Placed in fire-retardant containers",
+    "description": "A metallic, trash-can shaped creature with built-in fire suppression. Its body absorbs and neutralizes hazardous chemicals, leaving only safe residue."
+  },
+  {
+    "id": 43,
+    "name": "Pedicurust",
+    "question": "What must be done with pedicure foot spa equipment between clients?",
+    "options": [
+      "Wipe with disinfectant towel",
+      "Rinse with water",
+      "Clean all parts including removing drain screens",
+      "No cleaning needed if no visible debris"
+    ],
+    "correctAnswer": "Clean all parts including removing drain screens",
+    "description": "A crab-like creature with multiple cleaning appendages. Its shell opens to reveal miniature cleaning tools and it leaves a trail of sanitized bubbles."
+  },
+  {
+    "id": 45,
+    "name": "Separatox",
+    "question": "How should oxidizers be stored in relation to other chemicals?",
+    "options": [
+      "Mixed with flammables",
+      "On open shelves",
+      "Separated by adequate distance or barriers",
+      "Under workstations"
+    ],
+    "correctAnswer": "Separated by adequate distance or barriers",
+    "description": "A crystalline creature with compartments that automatically separate reactive chemicals. Its body glows red when incompatible chemicals are stored together."
+  },
+  {
+    "id": 46,
+    "name": "Labelguard",
+    "question": "What must be included on all chemical product labels in a facility?",
+    "options": [
+      "Just product name",
+      "Product name and hazard warnings",
+      "All hazard warnings and ingredients",
+      "No specific labeling requirements"
+    ],
+    "correctAnswer": "All hazard warnings and ingredients",
+    "description": "A book-shaped creature with magnifying glass eyes that glow when labels are incomplete. Its pages automatically update with proper labeling requirements."
+  },
+  {
+    "id": 47,
+    "name": "Inspectron",
+    "question": "How often must a cosmetology facility allow inspections?",
+    "options": [
+      "Only when complaints are filed",
+      "Once every 5 years",
+      "At any time during business hours",
+      "Never required"
+    ],
+    "correctAnswer": "At any time during business hours",
+    "description": "A robotic owl with 360-degree rotating head and telescopic eyes. Its wings unfold to reveal inspection checklists and it beeps when violations are detected."
+  },
+  {
+    "id": 48,
+    "name": "Safestow",
+    "question": "How should chemical containers larger than 1 gallon be stored?",
+    "options": [
+      "Mixed with other chemicals",
+      "In separate cabinets or safety-valve containers",
+      "On open shelves for easy access",
+      "Under workstations"
+    ],
+    "correctAnswer": "In separate cabinets or safety-valve containers",
+    "description": "A sturdy, armored creature with compartmentalized storage spaces in its body. Its eyes glow red when chemicals are improperly stored and it carries miniature hazard signs."
+  },
+  {
+    "id": 49,
+    "name": "Consentacle",
+    "question": "What must be documented before performing chemical peels or dermaplaning?",
+    "options": [
+      "Just client name and date",
+      "Client signature on consent form",
+      "Full explanation of procedure, risks, and aftercare",
+      "No documentation required"
+    ],
+    "correctAnswer": "Full explanation of procedure, risks, and aftercare",
+    "description": "A squid-like creature with ink-filled tentacles that automatically generate consent forms. Its eyes glow when documentation is complete and it waves its tentacles warningly when key information is missing."
+  },
+  {
+    "id": 50,
+    "name": "Tempestorm",
+    "question": "How long is a temporary facility permit valid?",
+    "options": [
+      "1 week",
+      "30 consecutive calendar days",
+      "6 months",
+      "1 year"
+    ],
+    "correctAnswer": "30 consecutive calendar days",
+    "description": "A swirling, cloud-like creature with a built-in hourglass that counts down the permit duration. Its body crackles with warning sparks when the permit is about to expire and it carries miniature inspection checklists in its vapor trails."
+  },
+  {
+    "id": 51,
+    "name": "Freelancer",
+    "question": "What must freelance practitioners display in all advertising?",
+    "options": [
+      "Their prices",
+      "Certificate and freelance authorization numbers",
+      "Client testimonials",
+      "No requirements"
+    ],
+    "correctAnswer": "Certificate and freelance authorization numbers",
+    "description": "A nomadic creature with a holographic display on its chest that automatically shows proper credentials. Its body changes color when advertising lacks required information."
+  },
+  {
+    "id": 52,
+    "name": "Contractor",
+    "question": "How often must independent contractor registrations be renewed?",
+    "options": [
+      "Every 6 months",
+      "Every year",
+      "Every 2 years",
+      "Never"
+    ],
+    "correctAnswer": "Every year",
+    "description": "A chameleon-like creature that blends into different work environments. Its skin displays renewal dates that glow red when overdue."
+  },
+  {
+    "id": 53,
+    "name": "Residerm",
+    "question": "What must separate home facility work areas from living spaces?",
+    "options": [
+      "Curtain",
+      "Solid floor-to-ceiling walls",
+      "6 foot distance",
+      "No separation required"
+    ],
+    "correctAnswer": "Solid floor-to-ceiling walls",
+    "description": "A creature made of building materials that can instantly form proper partitions. Its brick-like skin glows when inspections are needed."
+  },
+  {
+    "id": 54,
+    "name": "Demonstrite",
+    "question": "How long is a demonstration permit valid?",
+    "options": [
+      "7 days",
+      "14 days",
+      "30 days",
+      "60 days"
+    ],
+    "correctAnswer": "30 days",
+    "description": "A flashy, theatrical creature with a built-in countdown timer. Its performance-style outfit includes all required permit documentation."
+  },
+  {
+    "id": 55,
+    "name": "Bloodborne",
+    "question": "How often must bloodborne pathogens training be renewed?",
+    "options": [
+      "Every year",
+      "Every 2 years",
+      "Every 5 years",
+      "Only once"
+    ],
+    "correctAnswer": "Every year",
+    "description": "A microscopic-looking creature with glowing red cells that pulse with current training status. It carries miniature biohazard symbols."
+  },
+  {
+    "id": 56,
+    "name": "Hairwall",
+    "question": "How should hair clippings be disposed of?",
+    "options": [
+      "Left on floor",
+      "Swept into corner",
+      "In covered container",
+      "Down the drain"
+    ],
+    "correctAnswer": "In covered container",
+    "description": "A hairy creature with vacuum-like abilities to collect and contain clippings. Its body is covered with tiny compartments for proper disposal."
+  },
+  {
+    "id": 57,
+    "name": "Waxguard",
+    "question": "How should paraffin wax be applied to prevent contamination?",
+    "options": [
+      "With bare hands",
+      "Using single-use applicators",
+      "Reusing same applicator",
+      "No special requirements"
+    ],
+    "correctAnswer": "Using single-use applicators",
+    "description": "A wax-like creature that melts and reforms with sterile applicators. Its body temperature automatically adjusts to proper waxing levels."
+  },
+  {
+    "id": 58,
+    "name": "Piercewall",
+    "question": "What must separate cosmetology services from body piercing services?",
+    "options": [
+      "Open space",
+      "Curtain",
+      "Solid barrier",
+      "No separation needed"
+    ],
+    "correctAnswer": "Solid barrier",
+    "description": "A creature with impenetrable metallic skin that forms instant partitions. Its body displays warning symbols when barriers are missing."
+  },
+  {
+    "id": 59,
+    "name": "Licefree",
+    "question": "What must be done with combs/brushes after treating head lice?",
+    "options": [
+      "Wipe with towel",
+      "Soak in high-level disinfectant",
+      "Rinse with water",
+      "No special cleaning"
+    ],
+    "correctAnswer": "Soak in high-level disinfectant",
+    "description": "A tiny, nit-picking creature with magnified vision. Its body produces medicated vapor that eliminates parasites on contact."
+  },
+  {
+    "id": 60,
+    "name": "Esthetisafe",
+    "question": "How deep can microneedling penetrate in esthetics practice?",
+    "options": [
+      "No limit",
+      "Only epidermis layer",
+      "Into dermis layer",
+      "To muscle layer"
+    ],
+    "correctAnswer": "Only epidermis layer",
+    "description": "A creature with retractable needles that automatically stop at safe depths. Its skin displays anatomical diagrams showing permitted penetration levels."
+  },
+  {
+    "id": 61,
+    "name": "Curriculoom",
+    "question": "How many practical operations must a hair design student complete?",
+    "options": [
+      "200",
+      "350",
+      "455",
+      "500"
+    ],
+    "correctAnswer": "455",
+    "description": "A loom-like creature that weaves educational requirements into its fabric. Its threads glow when proper training milestones are reached."
+  },
+  {
+    "id": 63,
+    "name": "Wallguard",
+    "question": "What must separate home facility work areas from living spaces?",
+    "options": [
+      "Curtain",
+      "Temporary divider",
+      "Solid floor-to-ceiling walls",
+      "No separation needed"
+    ],
+    "correctAnswer": "Solid floor-to-ceiling walls",
+    "description": "A brick-like creature that forms instant permanent barriers. Its mortar glows when inspections are needed."
+  },
+  {
+    "id": 64,
+    "name": "Tranzcript",
+    "question": "What must be on an official school transcript?",
+    "options": [
+      "Just hours",
+      "Hours and practical operations",
+      "Only graduation date",
+      "No requirements"
+    ],
+    "correctAnswer": "Hours and practical operations",
+    "description": "A scroll-like creature that unfurls to reveal complete educational records. Its ink glows when all required information is present."
+  },
+  {
+    "id": 65,
+    "name": "Hazardine",
+    "question": "Where should chemical waste be disposed daily?",
+    "options": [
+      "Regular trash",
+      "Fire-retardant container",
+      "Down drain",
+      "Outside dumpster"
+    ],
+    "correctAnswer": "Fire-retardant container",
+    "description": "A spiky creature with built-in fire suppression. Its body neutralizes hazardous materials on contact."
+  },
+  {
+    "id": 66,
+    "name": "Certiclaw",
+    "question": "How often must independent contractors renew registration?",
+    "options": [
+      "Every 6 months",
+      "Every year",
+      "Every 2 years",
+      "Never"
+    ],
+    "correctAnswer": "Every year",
+    "description": "A badge-like creature with claws that mark renewal dates. Its body pulses when renewal is due."
+  },
+  {
+    "id": 68,
+    "name": "Sanistore",
+    "question": "How should clean tools be stored?",
+    "options": [
+      "Mixed with dirty tools",
+      "In open containers",
+      "Separate from used tools",
+      "No special storage"
+    ],
+    "correctAnswer": "Separate from used tools",
+    "description": "A cabinet-like creature with self-organizing compartments. Its shelves glow when tools are properly separated."
+  },
+  {
+    "id": 69,
+    "name": "Licenshock",
+    "question": "What's the penalty for practicing without certification?",
+    "options": [
+      "$100 fine",
+      "$500 fine",
+      "$1000 first offense",
+      "No penalty"
+    ],
+    "correctAnswer": "$1000 first offense",
+    "description": "A electric eel-like creature that delivers proportional shocks for violations. Its voltage increases with repeat offenses."
+  },
+  {
+    "id": 70,
+    "name": "Dermaguide",
+    "question": "What must be documented for dermaplaning services?",
+    "options": [
+      "Just client name",
+      "Procedure explanation and consent",
+      "Only payment record",
+      "No documentation"
+    ],
+    "correctAnswer": "Procedure explanation and consent",
+    "description": "A scalpel-shaped creature that produces consent forms from its blade. Its handle glows when documentation is complete."
+  },
+  {
+    "id": 71,
+    "name": "Chemiclaw",
+    "question": "How should oxidizers be stored?",
+    "options": [
+      "With flammables",
+      "Separate from other chemicals",
+      "On open shelves",
+      "No special storage"
+    ],
+    "correctAnswer": "Separate from other chemicals",
+    "description": "A dragon-like creature with compartments that isolate reactive chemicals. Its scales glow when incompatible chemicals are near."
+  },
+  {
+    "id": 72,
+    "name": "Autoclaveon",
+    "question": "What's required for tool sterilization?",
+    "options": [
+      "Boiling water",
+      "FDA-registered sterilizer",
+      "Disinfectant spray",
+      "No sterilization needed"
+    ],
+    "correctAnswer": "FDA-registered sterilizer",
+    "description": "A steam-powered creature with built-in sterilization chambers. Its gauges show proper temperature and pressure levels."
+  },
+  {
+    "id": 73,
+    "name": "Infecto-block",
+    "question": "What's required for blood exposure control?",
+    "options": [
+      "Gloves only",
+      "Gloves and disinfectant",
+      "Gloves, disinfectant and sharps container",
+      "No special requirements"
+    ],
+    "correctAnswer": "Gloves, disinfectant and sharps container",
+    "description": "A shield-like creature with built-in biohazard protection. Its surface repels contaminants and displays warning symbols."
+  },
+  {
+    "id": 74,
+    "name": "Renewtide",
+    "question": "How long can a license remain inactive before expiring?",
+    "options": [
+      "6 months",
+      "1 year",
+      "3 years",
+      "Never expires"
+    ],
+    "correctAnswer": "3 years",
+    "description": "A wave-like creature with a built-in calendar. Its crests break when deadlines approach."
+  },
+  {
+    "id": 75,
+    "name": "Sharpshell",
+    "question": "What container is required for used blades?",
+    "options": [
+      "Plastic bag",
+      "Puncture-proof container",
+      "Open bin",
+      "No container needed"
+    ],
+    "correctAnswer": "Puncture-proof container",
+    "description": "A turtle-like creature with an impenetrable shell. Its body safely contains hazardous sharps."
+  },
+  {
+    "id": 76,
+    "name": "Hygienome",
+    "question": "How often must practitioners wash their hands?",
+    "options": [
+      "Only at start of day",
+      "Before and after each client",
+      "When visibly dirty",
+      "Only after chemical services"
+    ],
+    "correctAnswer": "Before and after each client",
+    "description": "A microscopic organism with soap bubble hands that multiply when proper hygiene is followed. Its body glows when hands are properly washed."
+  },
+  {
+    "id": 77,
+    "name": "Certiflow",
+    "question": "How long must client records be kept for esthetic services?",
+    "options": [
+      "30 days",
+      "6 months",
+      "1 year",
+      "3 years"
+    ],
+    "correctAnswer": "3 years",
+    "description": "A flowing, liquid-like creature that forms into perfect file folders. Its body automatically dates and organizes records, glowing when properly maintained."
+  },
+  {
+    "id": 78,
+    "name": "Permitide",
+    "question": "What is required for a demonstration permit applicant?",
+    "options": [
+      "Oregon license",
+      "Active out-of-state license with no discipline",
+      "No requirements",
+      "Just payment"
+    ],
+    "correctAnswer": "Active out-of-state license with no discipline",
+    "description": "A tidal creature that carries licensing documents in its waves. Its body changes color when credentials are verified."
   }
 ]
