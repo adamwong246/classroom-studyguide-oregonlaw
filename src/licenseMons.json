@@ -2,7 +2,6 @@
   {
     "id": 1,
     "name": "Disinfectle",
-    "type": "water",
     "question": "How long must tools soak in disinfectant?",
     "options": ["5 minutes", "10 minutes", "30 seconds", "Until dry"],
     "correctAnswer": "10 minutes",
@@ -11,7 +10,6 @@
   {
     "id": 2,
     "name": "Glowgiene",
-    "type": "fairy",
     "question": "When must gloves be worn?",
     "options": ["Shampooing", "Applying color", "Blowdrying", "All of the above"],
     "correctAnswer": "Applying color",
@@ -20,7 +18,6 @@
   {
     "id": 3,
     "name": "Ventiloom",
-    "type": "flying",
     "question": "What defines \"adequate ventilation\" in a facility?",
     "options": [
       "Open windows only",
@@ -34,7 +31,6 @@
   {
     "id": 4,
     "name": "Sharpshock",
-    "type": "electric",
     "question": "How should used sharp-edged tools be disposed?",
     "options": [
       "Regular trash",
@@ -48,7 +44,6 @@
   {
     "id": 5,
     "name": "Waxit",
-    "type": "fire",
     "question": "When must used wax be disposed?",
     "options": [
       "Weekly",
@@ -62,7 +57,6 @@
   {
     "id": 6,
     "name": "Towelyn",
-    "type": "normal",
     "question": "How should chemically soiled towels be stored?",
     "options": [
       "Open laundry basket",
@@ -76,7 +70,6 @@
   {
     "id": 7,
     "name": "Dermaplaneon",
-    "type": "steel",
     "question": "What is required before performing dermaplaning?",
     "options": [
       "No requirements",
@@ -90,7 +83,6 @@
   {
     "id": 8,
     "name": "Peelizard",
-    "type": "poison",
     "question": "How deep can an esthetician perform chemical peels?",
     "options": [
       "No depth limit",
@@ -104,7 +96,6 @@
   {
     "id": 9,
     "name": "Contaminull",
-    "type": "ghost",
     "question": "What must be done before disinfecting tools?",
     "options": [
       "Just rinse with water",
@@ -118,7 +109,6 @@
   {
     "id": 10,
     "name": "Floorguard",
-    "type": "ground",
     "question": "What material must facility floors be made of?",
     "options": [
       "Carpet only",

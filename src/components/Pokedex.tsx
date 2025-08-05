@@ -19,8 +19,7 @@ export default function Pokedex() {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredMons = licenseMonsData.filter(mon =>
-    mon.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    mon.type.toLowerCase().includes(searchTerm.toLowerCase())
+    mon.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -64,9 +63,6 @@ export default function Pokedex() {
             <div className="pixel-card">
               <div className="card-header d-flex justify-content-between align-items-center">
                 <span>{selectedMon.name}</span>
-                <span className={`badge bg-${selectedMon.type}`}>
-                  {selectedMon.type}
-                </span>
               </div>
               <div className="card-body">
 

@@ -22,7 +22,6 @@ mkdir -p src/assets/licensemons
 jq -c '.[]' src/licenseMons.json | while read -r mon; do
     id=$(echo "$mon" | jq -r '.id')
     name=$(echo "$mon" | jq -r '.name')
-    type=$(echo "$mon" | jq -r '.type')
     description=$(echo "$mon" | jq -r '.description')
     
     output_file="src/assets/licensemons/${name}.tsx"
@@ -30,7 +29,7 @@ jq -c '.[]' src/licenseMons.json | while read -r mon; do
     echo "Generating SVG for ${name} (ID: ${id})..."
     
     # Create the prompt for aider
-    prompt="Create a React SVG component for a LicenseMon named ${name} (type: ${type}). 
+    prompt="Create a React SVG component for a LicenseMon named ${name}. 
     Description: ${description}
     The component should:
     - Be 200x200 pixels (viewBox=\"0 0 200 200\")

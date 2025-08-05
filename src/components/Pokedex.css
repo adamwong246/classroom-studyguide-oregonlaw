@@ -12,21 +12,3 @@
   text-transform: uppercase;
 }
 
-/* Type colors */
-.bg-water { background-color: #6890F0; }
-.bg-fire { background-color: #F08030; }
-.bg-grass { background-color: #78C850; }
-.bg-electric { background-color: #F8D030; }
-.bg-psychic { background-color: #F85888; }
-.bg-ice { background-color: #98D8D8; }
-.bg-dragon { background-color: #7038F8; }
-.bg-dark { background-color: #705848; }
-.bg-fairy { background-color: #EE99AC; }
-.bg-steel { background-color: #B8B8D0; }
-.bg-ghost { background-color: #705898; }
-.bg-rock { background-color: #B8A038; }
-.bg-ground { background-color: #E0C068; }
-.bg-poison { background-color: #A040A0; }
-.bg-flying { background-color: #A890F0; }
-.bg-fighting { background-color: #C03028; }
-.bg-normal { background-color: #A8A878; }

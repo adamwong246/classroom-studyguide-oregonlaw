@@ -4,7 +4,6 @@ import LicenseMonDisplay from './LicenseMonDisplay';
 interface LicenseMon {
   id: number;
   name: string;
-  type: string;
   question: string;
   options: string[];
   correctAnswer: string;
